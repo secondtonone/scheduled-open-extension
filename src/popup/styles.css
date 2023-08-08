@@ -1,0 +1,58 @@
+:root {
+  --bg-light: rgb(233, 232, 236);
+  --bg-dark: rgb(46, 45, 52);
+}
+
+body {
+  height: 100%;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-light) !important;
+  margin: 0 auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b00 inset !important;
+  -webkit-text-fill-color: #222 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark) !important;
+  }
+
+  input[type="datetime-local"] {
+    color-scheme: dark;
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form, #list {
+  width: 300px;
+  padding: 16px;
+}
+
+form button {
+  margin-top: 16px !important;
+}

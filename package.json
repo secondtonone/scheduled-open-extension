@@ -1,0 +1,56 @@
+{
+  "name": "scheduled-open-extension",
+  "version": "1.0.0",
+  "description": "ChronoLinkOpener extension for opening pages by scheduler",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --progress --color profile",
+    "dev": "NODE_ENV=development webpack --progress --color profile",
+    "build:local": "rimraf dist && npm run build",
+    "watch": "npm run dev -- --watch",
+    "lint": "eslint --ext .ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secondtonone/scheduled-open-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/secondtonone/scheduled-open-extension/issues"
+  },
+  "homepage": "https://github.com/secondtonone/scheduled-open-extension#readme",
+  "devDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.2",
+    "@mui/material-next": "^6.0.0-alpha.94",
+    "@types/chrome": "^0.0.241",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unicorn": "^40.0.0",
+    "formik": "^2.4.2",
+    "html-webpack-plugin": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.1",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "yup": "^1.2.0"
+  }
+}
