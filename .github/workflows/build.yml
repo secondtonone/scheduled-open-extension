@@ -1,4 +1,4 @@
-name: Lint # name of the action (displayed in the github interface)
+name: Build # name of the action (displayed in the github interface)
 
 on: # event list
   push:
@@ -9,8 +9,8 @@ env: # environment variables (available in any part of the action)
   NODE_VERSION: 18
 
 jobs: # list of things to do
-  linting:
-    name: Linting # job name (unique id)
+  build:
+    name: Build # job name (unique id)
     runs-on: ubuntu-latest # on which machine to run
     steps: # list of steps
       - name: Install NodeJS
@@ -26,3 +26,9 @@ jobs: # list of things to do
 
       - name: Build
         run: npm run build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: extension
+          path: dist/
+          retention-days: 5
