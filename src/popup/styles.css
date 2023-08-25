@@ -34,6 +34,11 @@ input:-webkit-autofill:active{
   input[type="datetime-local"] {
     color-scheme: dark;
   }
+
+  .Mui-disabled {
+    color: gray !important;
+    background-color: rgba(var(--md-sys-color-onSurfaceChannel, 28 27 31) / 0.3) !important;
+  }
 }
 
 input::-webkit-calendar-picker-indicator {
@@ -55,4 +60,9 @@ form, #list {
 
 form button {
   margin-top: 16px !important;
+}
+
+.MuiListItemText-primary {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

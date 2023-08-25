@@ -1,8 +1,7 @@
-# scheduled-open-extension
-
 <div align="center">
+    <img src="https://github.com/secondtonone/scheduled-open-extension/blob/main/public/logo/logo-128.png"/>
     <h1>ChronoLinkOpener</h1>
-    <h3>Extension for opening pages by scheduler</h3>
+    <h3>ChronoLinkOpener is a web browser extension for opening pages by scheduler.</h3>
 </div>
 
 ## Installation
@@ -27,46 +26,6 @@ Therefore, you should be able to install this extension on any of the following 
     - Vivaldi
     - Opera
 
-> So it doesn't work on **Firefox** or **Safari**?
-
-No, Firefox uses a different extension format. That being said, it is usually not too hard to port extensions from Chrome to Firefox.
-Read [their porting documentation](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/) for more information.
-
-Safari uses yet another extension format and porting is usually harder.
-You can find more information [here](https://bartsolutions.github.io/2020/11/20/safari-extension/).
-
-> Does this work on **Chrome for Android/iOS**?
-
-Chrome for mobile doesn't currently support extensions.
-
-> I don't need a **popup tool** for my extension! Can I remove it?
-
-Yes, simply delete the `popup` folder and remove the `default_popup` property from the manifest.
-
-> I changed some code in the extension, but my **changes aren't taken into account**!
-
-For most of the changes you make, you will need to reload your extension for the changes to be applied.
-To do that, go to the chrome://extensions page and click the reload button of your extension.
-Note that most of the changes you will make to the settings page or the popup don't require reloading the extension.
-
-> Can I follow a **tutorial about a v2 extension** with this?
-
-Most of what you will find in those tutorials still holds with v3.
-
-However, a few things (notably best practices) have changed.
-You should read the [official migration page (v2 to v3)](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/) before following such a tutorial.
-
-> When I make an erroneous change in my service worker, the extension doesn't load! How can I **debug a service worker**?
-
-Using the debugger if your service worker is not loaded is not possible.
-
-However, if you want to test some piece of code before putting it in your service worker, you can:
-- load your extension with a working version of the service worker.
-- click on "service worker" on the page _chrome://extensions_. This will open the console attached to the service worker.
-- paste your code in the console and see if any error is logged.
-
-Note that in this console, you have access to anything your service worker has access to, including its variables, functions and chrome APIs.
-
 > How do I **uninstall** this extension from my browser?
 
 - Go to the [extensions page](chrome://extensions): chrome://extensions.
@@ -74,15 +33,12 @@ Note that in this console, you have access to anything your service worker has a
   If you don't see such a card, it means the extension is not installed.
 - Simply click the _Delete_ button at the bottom of the card. Click _ok_ if a popup asks you for confirmation. The extension is now uninstalled.
 
-> I want to **push my changes to my own repo**, how do I do this?
-
-- If you forked this repo and cloned your own fork locally, git will push to your fork on your account automatically (i.e. use the command `git push` or `git push origin <your-branch>`).
-
-- If you downloaded a zip or simply cloned this repo locally, do the following:
-    - Create a github account if you don't already have one and install git on your machine.
-    - Create a new (empty) repo on your github and copy its url.
-    - Open a terminal in the folder where the extension is cloned.
-    - Run the command `git init`, then `git commit -am "Initial commit"`
-    - Run the command `git remote add origin <url-of-your-repo>`
-    - Run `git push -u origin main`. The extension code is now on your repo, on brnach _main_.
-    - If you want, you can make the _main_ branch the default one and delete the _main_ branch in the settings of your repo.
+## Disclaimer
+* This software is provided for educational purposes only and
+is provided "AS IS", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and noninfringement. in no event shall the
+authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising from,
+out of or in connection with the software or the use or other dealings in the
+software.

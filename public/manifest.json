@@ -3,7 +3,7 @@
     "manifest_version": 3,
     "name": "ChronoLinkOpener",
     "description": "Automating the opening of web pages based on a timer.",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
@@ -20,7 +20,8 @@
         "scripting",
         "background",
         "nativeMessaging",
-        "contextMenus"
+        "contextMenus",
+        "sidePanel"
     ],
     "host_permissions": [
         "*://*/*"
@@ -28,5 +29,8 @@
     "background": {
         "service_worker": "service-worker.js",
         "type": "module"
+    },
+    "side_panel": {
+        "default_path": "popup.html"
     }
 }

@@ -34,7 +34,7 @@ const ScheduleList: FC<IScheduleListProps> = ({ list, onDelete }) => {
                 </IconButton>
               }>
               <ListItemText
-                primary={url}
+                primary={<span title={url}>{url}</span>}
                 secondary={`at ${new Date(datetime).toLocaleString()}`}
               />
             </ListItem>

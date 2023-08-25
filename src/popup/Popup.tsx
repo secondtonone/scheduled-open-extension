@@ -77,7 +77,12 @@ const Popup = () => {
         validationSchema={schema}
         onSubmit={(values: FormValues, { resetForm }) => {
           onSubmit(values);
-          resetForm();
+          resetForm({
+            values: {
+              url: initialValues.url,
+              datetime: values.datetime
+            }
+          });
         }}>
         <ScheduleForm />
       </Formik>

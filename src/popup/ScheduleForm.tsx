@@ -10,6 +10,8 @@ import getCurrentDate from '~/utils/getCurrentDate';
 
 import { useFormikContext } from 'formik';
 
+const buttonTheme = extendTheme({});
+
 const ScheduleForm = () => {
   const {
     isValid,
@@ -65,7 +67,7 @@ const ScheduleForm = () => {
         onBlur={handleBlur('datetime')}
         onChange={(e) => handleChange('datetime')(e.target.value)}
       />
-      <ThemeProvider theme={extendTheme({})}>
+      <ThemeProvider theme={buttonTheme}>
         <Button
           color="primary"
           size="large"
