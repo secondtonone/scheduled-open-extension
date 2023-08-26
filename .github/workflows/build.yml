@@ -27,8 +27,11 @@ jobs: # list of things to do
       - name: Build
         run: npm run build
 
+      - id: dotenv
+        uses: falti/dotenv-action@v1.0.4
+
       - uses: actions/upload-artifact@v3
         with:
-          name: extension
+          name: extension-${{ steps.dotenv.outputs.version }}
           path: dist/
           retention-days: 5
