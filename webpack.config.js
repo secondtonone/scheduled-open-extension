@@ -5,6 +5,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import WebpackHookPlugin from 'webpack-hook-plugin';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -118,6 +119,10 @@ export default {
     }),
     new WebpackHookPlugin({
       onBuildEnd: ['npm run manifest']
+    }),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['**/*.map'],
+      protectWebpackAssets: false,
     })
   ],
 };

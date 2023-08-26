@@ -27,11 +27,28 @@ jobs: # list of things to do
       - name: Build
         run: npm run build
 
-      - id: dotenv
+      - name: Version
+        id: dotenv
         uses: falti/dotenv-action@v1.0.4
 
-      - uses: actions/upload-artifact@v3
+      - name: Release
+        uses: actions/create-release@v1
+        id: create_release
         with:
-          name: extension-${{ steps.dotenv.outputs.version }}
-          path: dist/
-          retention-days: 5
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.dotenv.outputs.version }}
+          tag_name: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Upload artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist
+          asset_name: extension.zip
+          asset_content_type: application/zip
+  
