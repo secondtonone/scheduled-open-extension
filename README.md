@@ -5,7 +5,7 @@
 </div>
 
 ## Installation
-- **Fork** this repo, then **clone your forked repo locally**. If you don't have a github account, you can simply download a zip of the repo and unzip it on your computer.
+- Go to [Realeses](https://github.com/secondtonone/scheduled-open-extension/releases), find **latest**, download file with name **extension-[version].zip**. Unpack the zip-archive.
 - **Open [the extensions page](chrome://extensions)** in your browser: `chrome://extensions`. This link works on any chromium-based browser.
 - If you did not do it already, **toggle the "developer mode"**. This is usually a toggle button at the top right of the extensions page.
 - Click the button **_load unpacked extension_**.
