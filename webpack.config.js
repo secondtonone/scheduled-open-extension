@@ -4,14 +4,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import WebpackHookPlugin from 'webpack-hook-plugin';
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
+import getPathNames from './scripts/getPathNames.js';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 dotenv.config();
-
+const { __dirname } = getPathNames(import.meta.url);
 const IS_PROD = process.env.NODE_ENV === 'production';
 
 export default {

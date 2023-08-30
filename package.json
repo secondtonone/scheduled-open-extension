@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "manifest": "node generateManifest.js",
     "build": "NODE_ENV=production webpack --progress --color profile",
     "dev": "NODE_ENV=development webpack --progress --color profile",
     "build:local": "rimraf dist && npm run build",
     "watch": "npm run dev -- --watch",
+    "manifest": "node scripts/generateManifest.js",
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx ."
   },

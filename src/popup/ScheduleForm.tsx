@@ -32,6 +32,7 @@ const ScheduleForm = () => {
     if (urlFromPage) {
       setFieldValue('url', urlFromPage);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

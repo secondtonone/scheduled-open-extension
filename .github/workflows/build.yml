@@ -50,3 +50,4 @@ jobs: # list of things to do
           artifacts: extension-${{ steps.dotenv.outputs.VERSION }}.zip
           generateReleaseNotes: true
           removeArtifacts: true
+          skipIfReleaseExists: true
