@@ -1,6 +1,6 @@
 {
   "name": "scheduled-open-extension",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ChronoLinkOpener extension for opening pages by scheduler",
   "main": "index.js",
   "type": "module",
