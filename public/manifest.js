@@ -1,3 +1,4 @@
+import package_json from '../package.json' assert { type: 'json' };
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -6,7 +7,7 @@ export default {
   "manifest_version": 3,
   "name": process.env.TITLE,
   "description": process.env.DESC,
-  "version": process.env.VERSION,
+  "version": package_json.version,
   "icons": {
     "16": "logo/logo-16.png",
     "48": "logo/logo-48.png",
